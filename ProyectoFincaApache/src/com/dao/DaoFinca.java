@@ -1,5 +1,5 @@
 
-package com.controlador;
+package com.dao;
 
 import com.conexion.Conexion;
 import com.modelo.Finca;

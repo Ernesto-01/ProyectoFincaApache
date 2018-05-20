@@ -3,7 +3,7 @@ package com.modelo;
 
 /**
  * Clase:Jornaleros
- * Version:1.0
+ * Version:1.1
  * Fecha de creacion:20/5/2018
  * Fecha de modificación:20/5/2018
  * @author Ernesto Rosales
@@ -17,12 +17,10 @@ public class Jornaleros {
     private int estado;
     private String direccion;
     private Pagos pagos;
-    private Finca Finca;
 
     public Jornaleros() {
     }
-
-    public Jornaleros(int idJornaleros, String nombre, String apellido, int edad, String horario, int estado, String direccion, Pagos pagos, Finca Finca) {
+    public Jornaleros(int idJornaleros, String nombre, String apellido, int edad, String horario, int estado, String direccion, Pagos pagos) {
         this.idJornaleros = idJornaleros;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -31,7 +29,6 @@ public class Jornaleros {
         this.estado = estado;
         this.direccion = direccion;
         this.pagos = pagos;
-        this.Finca = Finca;
     }
 
     public int getIdJornaleros() {
@@ -96,15 +93,6 @@ public class Jornaleros {
 
     public void setPagos(Pagos pagos) {
         this.pagos = pagos;
-    }
-
-    public Finca getFinca() {
-        return Finca;
-    }
-
-    public void setFinca(Finca Finca) {
-        this.Finca = Finca;
-    }
-    
+    }   
     
 }

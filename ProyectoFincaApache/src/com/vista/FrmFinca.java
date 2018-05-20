@@ -1,7 +1,7 @@
 
 package com.vista;
 
-import com.controlador.DaoFinca;
+import com.dao.DaoFinca;
 import com.modelo.Finca;
 import java.util.List;
 import javax.swing.JOptionPane;
