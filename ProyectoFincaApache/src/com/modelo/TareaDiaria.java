@@ -15,20 +15,23 @@ public class TareaDiaria {
     private String jornada;
     private String porcentajeRealizado;
     private Tareas tarea;
-    private TareaDiaria tareaDiaria;
+    private Tablones tablones;
+    private Jornaleros jornalero;
 
     public TareaDiaria() {
     }
 
-    public TareaDiaria(int idTareaDiaria, String fecha, int estado, String jornada, String porcentajeRealizado, Tareas tarea, TareaDiaria tareaDiaria) {
+    public TareaDiaria(int idTareaDiaria, String fecha, int estado, String jornada, String porcentajeRealizado, Tareas tarea, Tablones tablones, Jornaleros jornalero) {
         this.idTareaDiaria = idTareaDiaria;
         this.fecha = fecha;
         this.estado = estado;
         this.jornada = jornada;
         this.porcentajeRealizado = porcentajeRealizado;
         this.tarea = tarea;
-        this.tareaDiaria = tareaDiaria;
+        this.tablones = tablones;
+        this.jornalero = jornalero;
     }
+    
 
     public int getIdTareaDiaria() {
         return idTareaDiaria;
@@ -78,16 +81,23 @@ public class TareaDiaria {
         this.tarea = tarea;
     }
 
-    public TareaDiaria getTareaDiaria() {
-        return tareaDiaria;
+    public Tablones getTablones() {
+        return tablones;
     }
 
-    public void setTareaDiaria(TareaDiaria tareaDiaria) {
-        this.tareaDiaria = tareaDiaria;
+    public void setTablones(Tablones tablones) {
+        this.tablones = tablones;
     }
 
-    
-    
+    public Jornaleros getJornalero() {
+        return jornalero;
+    }
+
+    public void setJornalero(Jornaleros jornalero) {
+        this.jornalero = jornalero;
+    }
+
+        
     
     
 }
