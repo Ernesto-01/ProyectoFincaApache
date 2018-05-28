@@ -186,6 +186,8 @@ public class FrmJornaleros extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblDatos = new javax.swing.JTable();
 
+        setClosable(true);
+
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setText("ID");
@@ -391,10 +393,9 @@ public class FrmJornaleros extends javax.swing.JInternalFrame {
 
     private void btnAgregarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAgregarMouseClicked
         try {
-            if (u.camposRequeridos(1,jPanel1)) {
-               // u.camposRequeridos(jPanel1);
-               //mantenimiento(1); 
-            }
+            
+               mantenimiento(1); 
+            
             
         } catch (Exception e) {
             e.printStackTrace();
@@ -403,15 +404,18 @@ public class FrmJornaleros extends javax.swing.JInternalFrame {
 
     private void btnModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnModificarMouseClicked
         try {
+            if (u.camposRequeridos(jPanel1)) {
+               
             mantenimiento(2);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }//GEN-LAST:event_btnModificarMouseClicked
 
     private void btnEliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEliminarMouseClicked
-        try {
-            mantenimiento(3);
+        try {            
+            mantenimiento(3);            
         } catch (Exception e) {
             e.printStackTrace();
         }

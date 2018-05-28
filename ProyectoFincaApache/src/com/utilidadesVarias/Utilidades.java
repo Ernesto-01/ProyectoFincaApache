@@ -67,18 +67,6 @@ public class Utilidades {
          }
          return true;
      }
-     
-     public boolean camposRequeridos(int i,JPanel panel){
-         for (int j =1+ 0; panel.getComponents().length>j; j++) { 
-             if (panel.getComponents()[j] instanceof JTextField) {
-                 if (((JTextField)panel.getComponents()[j]).getText().equals("")) {
-                     JOptionPane.showMessageDialog(null, "Campos vacios","Campos nulos",2,null);
-                     return false;
-                 }
-                 
-            }
-         }
-         return true;
-     }
+    
      
 }

@@ -31,11 +31,13 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     
     EsteticaDiseño esteticaDiseño=new EsteticaDiseño();
     Animacion animacion=new Animacion();
-    Utilidades u=new Utilidades();
+    Utilidades u=new Utilidades();//En esta clase se encuentran validaciones metodos para limpiar cajas
     
-    
+    //instanciando las clase internalFrame
     FrmJornaleros frmJornaleros=new FrmJornaleros();
-    
+    FrmPagos frmPagos=new FrmPagos();
+    FrmTareasDiarias frmTareasDiarias=new FrmTareasDiarias();
+              
 //</editor-fold>
     /**
      * This method is called from within the constructor to initialize the form.
@@ -220,6 +222,9 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         lblTareas.setText("Tareas Diarias");
         lblTareas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblTareas.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblTareasMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lblTareasMouseEntered(evt);
             }
@@ -234,6 +239,9 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
         lblPagos.setText("Pagos");
         lblPagos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblPagos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblPagosMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lblPagosMouseEntered(evt);
             }
@@ -311,7 +319,7 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
                                 .addComponent(lblJornalero_op, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(lblJornalero, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 51, Short.MAX_VALUE))
+                        .addGap(0, 11, Short.MAX_VALUE))
                     .addGroup(menu1pLayout.createSequentialGroup()
                         .addComponent(lblEnvios_op, javax.swing.GroupLayout.PREFERRED_SIZE, 9, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -361,10 +369,10 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
                 .addGroup(menu1pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lblInsumos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblInsumos_op, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.add(menu1p, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
+        jPanel1.add(menu1p, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 160, 490));
 
         menu1.setBackground(new java.awt.Color(51, 51, 51));
 
@@ -542,11 +550,11 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(menu2p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 272, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 231, Short.MAX_VALUE)
                 .addGroup(menu1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblCerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblCerrar_op, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addGap(52, 52, 52))
         );
 
         jPanel1.add(menu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 170, 680));
@@ -615,7 +623,7 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_lblCerrarMouseExited
 
     private void lblProveedoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblProveedoresMouseClicked
-        mostrarFrm(frmJornaleros);
+        
         
     }//GEN-LAST:event_lblProveedoresMouseClicked
 
@@ -674,7 +682,7 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_lblEnviosMouseExited
 
     private void lblJornaleroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblJornaleroMouseClicked
-        
+        mostrarFrm(frmJornaleros);
     }//GEN-LAST:event_lblJornaleroMouseClicked
 
     private void lblJornaleroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblJornaleroMouseEntered
@@ -710,8 +718,16 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jLabel1MouseClicked
 
+    private void lblPagosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblPagosMouseClicked
+        mostrarFrm(frmPagos);
+    }//GEN-LAST:event_lblPagosMouseClicked
+
+    private void lblTareasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblTareasMouseClicked
+        mostrarFrm(frmTareasDiarias);
+    }//GEN-LAST:event_lblTareasMouseClicked
+
     
-    //<editor-fold defaultstate="collapsed" desc="mover menu">
+         //<editor-fold defaultstate="collapsed" desc="mover menu">
         public void ocultarPanel(JComponent comp){
 int posicion = comp.getX();
         if(posicion > -1){
