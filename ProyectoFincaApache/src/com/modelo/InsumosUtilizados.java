@@ -1,4 +1,4 @@
-package com.modelo;
+package modelo;
 
 /**
  *
@@ -6,17 +6,27 @@ package com.modelo;
  */
 public class InsumosUtilizados {
     
+    private int idInsumoUtilizados;
     private int cantidadUtilizada;
-    private int idUtilizada;
+    private int idInsumo;
     private int idTareaDiaria;
 
     public InsumosUtilizados() {
     }
 
-    public InsumosUtilizados(int cantidadUtilizada, int idUtilizada, int idTareaDiaria) {
+    public InsumosUtilizados(int idInsumoUtilizados, int cantidadUtilizada, int idInsumo, int idTareaDiaria) {
+        this.idInsumoUtilizados = idInsumoUtilizados;
         this.cantidadUtilizada = cantidadUtilizada;
-        this.idUtilizada = idUtilizada;
+        this.idInsumo = idInsumo;
         this.idTareaDiaria = idTareaDiaria;
+    }
+
+    public int getIdInsumoUtilizados() {
+        return idInsumoUtilizados;
+    }
+
+    public void setIdInsumoUtilizados(int idInsumoUtilizados) {
+        this.idInsumoUtilizados = idInsumoUtilizados;
     }
 
     public int getCantidadUtilizada() {
@@ -27,12 +37,12 @@ public class InsumosUtilizados {
         this.cantidadUtilizada = cantidadUtilizada;
     }
 
-    public int getIdUtilizada() {
-        return idUtilizada;
+    public int getIdInsumo() {
+        return idInsumo;
     }
 
-    public void setIdUtilizada(int idUtilizada) {
-        this.idUtilizada = idUtilizada;
+    public void setIdInsumo(int idInsumo) {
+        this.idInsumo = idInsumo;
     }
 
     public int getIdTareaDiaria() {
