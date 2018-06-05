@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a809e955-e316-425e-8a9c-91747b03e073">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[CALL sp_reportes(4)]]>
+	</queryString>
+	<field name="idInsumoUtilizados" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidadUtilizada" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idInsumo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[primary]]></fieldDescription>
+	</field>
+	<field name="idTareaDiaria" class="java.lang.Integer">
+		<fieldDescription><![CDATA[primary]]></fieldDescription>
+	</field>
+	<title>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="171" y="24" width="243" height="20" uuid="f368d111-6289-4d4f-8eba-2c59bd691ebf"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE: INSUMOS UTILIZADOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="55" height="20" uuid="7369f0eb-e73f-4192-aab8-6c8fc12d7167"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="93" y="0" width="138" height="20" uuid="6b623ea3-75cd-4b27-8b06-932d408cbbcf"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad Usada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="0" width="138" height="20" uuid="31309123-a1c8-4c95-9104-6c202fcdd8e5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Insumo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="414" y="0" width="138" height="20" uuid="38e70fd3-a167-4b0f-b032-3bc2ad5647fe"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tarea Diaria]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="55" height="20" uuid="2427807e-1b9a-415e-8362-e90986891c4e"/>
+				<textFieldExpression><![CDATA[$F{idInsumoUtilizados}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="93" y="0" width="138" height="20" uuid="2b62e273-9a1b-45e9-801a-92f0556d833c"/>
+				<textFieldExpression><![CDATA[$F{cantidadUtilizada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="259" y="0" width="138" height="20" uuid="750b1aa4-e31a-4854-b89c-1b07dead4f3c"/>
+				<textFieldExpression><![CDATA[$F{idInsumo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="0" width="138" height="20" uuid="0d1e78e1-7d49-4b9a-b7f0-6d12af363099"/>
+				<textFieldExpression><![CDATA[$F{idTareaDiaria}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
